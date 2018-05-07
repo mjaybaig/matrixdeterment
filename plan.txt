@@ -1,0 +1,43 @@
+A00, A01, A01, A03, A04.....A0n
+A10, A11, A12, A13, A14.....A1n
+A20, A21, A22, A23, A24.....A2n
+A30, A31, A32, A33, A34.....A3n
+A40, A41, A42, A43, A44.....A4n
+.     .    .    .    . .......
+.     .    .    .    . .......
+.     .    .    .    . .......
+An0, An1, An2, An3, An4.....Ann
+
+
+
+
+OUTPUT: Inverse of a matrix
+INPUT: Matrix of size nxn
+
+-Matrix used is an 2 dimensional array.
+Basic algorithm for finding the inverse:
+    -Find the determinant of the matrix
+    -Find the adjoint matrix of the matrix
+    -multiply the reciprocal of the determinant with each element in the adjoint matrix
+
+Finding the determinant of the matrix:
+	-We have an nxn matrix
+	-if n is greater than two,(atleast 3x3)
+		-make an n-1xn-1 matrix of all the elements except those in the same row/column as A01.
+		-repeat for all elements upto A0n
+		-for all of the matrices made (Ie the number of columns)
+			-send each of these matrixes to the deteminent function again
+        -else if n equals two, 
+		-Det = A00*A11 - A10*A01
+		-return the determinant
+	-else inform user the matrix has to be atleast 2x2		
+
+
+
+Determinant 2:
+   If the matrix > 2x2
+        multiply the first element with the determinant of the minor
+	repeat with all elements in first row
+	add them up
+   IF matrix is 2x2
+	determinant is the thingy
